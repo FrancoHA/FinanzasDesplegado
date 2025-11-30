@@ -40,14 +40,10 @@
         </div>
         
         <div class="payment-details">
-          <div class="row">
-            <span>Tasa Anual (TEA):</span>
-            <!-- Dividimos entre 100 para mostrar porcentaje correcto -->
-            <strong>{{ (datos.tasaInteres / 100) | percent:'1.2-2' }}</strong>
-          </div>
+         
           <div class="row">
             <span>Costo Real (TCEA):</span>
-            <strong>{{ (datos.tcea / 100) | percent:'1.2-2' }}</strong>
+            <strong>{{ (datos.tcea*100) | percent:'1.2-2' }}</strong>
           </div>
           <div class="divider"></div>
           <div class="row">
