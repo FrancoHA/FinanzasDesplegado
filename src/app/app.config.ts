@@ -30,7 +30,7 @@ export const appConfig: ApplicationConfig = {
           tokenGetter: tokenGetter,
           
           
-          allowedDomains: ['portalfinanza.azurewebsites.net/'],
+          allowedDomains: ['portalfinanza.azurewebsites.net'],
           disallowedRoutes: [
             'https://portalfinanza.azurewebsites.net/login', 
             'https://portalfinanza.azurewebsites.net/registrarusuario',
