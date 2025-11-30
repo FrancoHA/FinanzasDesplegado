@@ -83,7 +83,7 @@
 
       <ng-container matColumnDef="cok">
         <th mat-header-cell *matHeaderCellDef> COK (%) </th>
-        <td mat-cell *matCellDef="let element"> {{element.cok | percent:'1.2-2'}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.cok/100 | percent:'1.2-2'}} </td>
       </ng-container>
 
       <ng-container matColumnDef="margen">
