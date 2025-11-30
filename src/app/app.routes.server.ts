@@ -22,9 +22,9 @@ export const serverRoutes: ServerRoute[] = [
     path: 'reportes/resumenfinancierousuario/:id',
     renderMode: RenderMode.Server
   },
-  // Todas las demás rutas -> RenderMode.Prerender (o Server, como prefieras por defecto)
+
   {
     path: '**',
-    renderMode: RenderMode.Server // Recomendado: Server por defecto para evitar errores futuros
+    renderMode: RenderMode.Server 
   }
 ];
