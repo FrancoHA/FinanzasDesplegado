@@ -1,4 +1,4 @@
 export const environment={
-    production:false,
-    base:"https://portalfinanza.azurewebsites.net/"  
+    production:true,
+    base:"https://portalfinanza.azurewebsites.net"  
 }
