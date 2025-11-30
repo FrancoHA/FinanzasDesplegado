@@ -1,19 +1,15 @@
-// src/app/app.config.ts (CORREGIDO)
-
 import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 import { JwtModule } from '@auth0/angular-jwt';
 
 
-// 1. FUNCIÓN tokenGetter CORREGIDA PARA SSR
 export function tokenGetter() {
-  // Solo intenta acceder a sessionStorage si estás en el navegador
+  
   if (typeof window !== 'undefined' && window.sessionStorage) {
     return sessionStorage.getItem('token');
   }
@@ -26,7 +22,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(),
     provideHttpClient(withInterceptorsFromDi()), 
-    provideAnimationsAsync(), 
+    provideAnimations(), 
     provideCharts(withDefaultRegisterables()),
     importProvidersFrom(
       JwtModule.forRoot({
